@@ -31,6 +31,9 @@ a{
 a:hover{
 	cursor: pointer;
 }
+input:focus{
+    outline: none;
+}
 ul[type="none"] {
 	margin: 0;
 	padding: 0;
@@ -188,6 +191,7 @@ img.icon{
 }
 .slider .rightMenu img{
     margin-top: 20px;
+    border: 0;
 }
 .slider .rightMenu .rightMenuItem{
     width: 68px;
@@ -402,6 +406,9 @@ img.icon{
     display: inline-table;
     vertical-align: middle;
 }
+.footer .footerLogos a img{
+    border: 0;
+}
 .footer .footerLogos .linkIcon{
     padding-top: 8px;
 }
@@ -420,11 +427,10 @@ img.icon{
     background-color: #080c11;
     border-color: transparent;
     border-radius: 5px;
-    padding-left: 40px;
     font-size: 15px;
     font-weight: bolder;
-    padding-right: 60px;
     color: white;
+    padding: 25px 60px 25px 40px;
 }
 .footer .footerInputContainer .emailImage{
     position: absolute;
@@ -585,7 +591,7 @@ img.icon{
                 I`ll be ute when mad as a waratah. You little ripper rort where as busy as a captain cook.
             </div>
             <div class="footerInputContainer">
-                <input class="footerEmail"type="text" placeholder="Leave your email cobber" />
+                <input class="footerEmail" type="text" placeholder="Leave your email cobber" />
                 <img src="email.png" alt="email" class="emailImage"/>
             </div>
         </div>
