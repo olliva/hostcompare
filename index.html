@@ -1,0 +1,593 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+ <title>HostCompare</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+</head>
+<style type="text/css">
+* {
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box;
+	font-family: helvetica, arial, sans-serif;
+}
+body {
+	margin: 0;
+    overflow-x:hidden;
+    min-width: 1250px;
+    color:;
+}
+p{
+	padding: 0;
+	margin: 0;
+	font-size: 13px;
+	line-height: 24px;
+	padding-top: 22px;
+	color: #959595;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	cursor: pointer;
+}
+ul[type="none"] {
+	margin: 0;
+	padding: 0;
+}
+img.icon{
+	vertical-align: middle;
+}
+.lightGreenButton{
+	height: 40px;
+	width: 105px;
+	background-color: #a3d39c;
+	border-radius: 5px;
+	border: 1px solid #a3d39c;
+	border-bottom: 2px solid #739e6c;
+	color: white;
+	font-size: 10px;
+	font-weight: bold;
+	margin-left: 35px;
+	border-top: 2px solid #a3d39c;
+}
+.lightGreenButton:hover {
+	cursor: pointer;
+	background-color: #92d389;
+}
+.lightGreenButton:hover:active {
+	border: 1px solid #92d389;
+	border-bottom: 2px solid #92d389;
+	border-top: 2px solid #639e59;
+}
+.lightBlueArrow{
+	width: 52px;
+	height: 52px;
+	background-color: #7accc8;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+    z-index: 2;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+    padding-top: 13px;
+
+}
+.inputIcon{
+	position: absolute;
+	top: 11px;
+	left: 18px;
+}
+.lightBlueButton{
+	width: 300px;
+	height: 65px;
+	background-color: #7accc8;
+	border: 3px solid #7accc8;
+	border-bottom-color: #4aaaa5;
+	text-align: center;
+	border-radius: 4px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	color: white;
+	font-size: 15px;
+}
+.lightBlueButton:hover{
+    cursor: pointer;
+    border-color: #35cfc7;
+    background-color: #35cfc7;
+    border-bottom-color: #4aaaa5;
+}
+.lightBlueButton:active{
+    border-color: #35cfc7;
+    border-top-color: #4aaaa5;
+}
+.contentContainer{
+	position: relative;
+	margin: 0 auto;
+	width: 950px;
+    overflow-x:;
+
+}
+.imageContainer{
+    margin: 0 -100px;
+}
+
+
+
+
+.pageHeader{
+	background-color: #232d3b;
+}
+.logoContainer {
+	display: inline-block;
+	padding: 20px 0;
+}
+.logoContainer .logoName{
+	display: inline-block;
+	color: white;
+	font-size: 18px;
+}
+.logoContainer .logoName .logoName1 {
+	font-weight: bold;
+}
+.logoContainer .logoName .logoName2 {
+	font-weight: lighter;
+}
+.pageHeader .contentContainer .headerNav{
+	display: inline-block;
+	float: right;
+	margin-top: 12px;
+}
+.pageHeader .contentContainer .headerNav ul{
+	display: inline-block;
+	vertical-align: middle;
+}
+.pageHeader .contentContainer .headerNav ul li{
+	display: inline-block;
+	font-size: 10px;
+	padding-left: 45px;
+}
+.pageHeader .contentContainer .headerNav ul li a{
+	color: #7f8388;
+}
+.pageHeader .contentContainer .headerNav ul li a:hover {
+	cursor: pointer;
+	color: white;
+}
+
+
+
+
+.slider{
+    width: 100%;
+	background-color: #ff742c;
+	border-top: 9px solid #ee5f15;
+	border-bottom: 30px solid #ff742c;
+    position: relative;
+}
+.slider .contentContainer{
+    background-color: #ff742c;
+}
+.slider .sliderHeader{
+	color: white;
+	font-size: 30px;
+	font-weight: lighter;
+	text-align: center;
+	padding: 40px 140px;
+}
+.slider .rightMenu{
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    border-bottom: 4px solid #4aaaa5;
+    background-color: #4aaaa5;
+    border-radius: 5px;
+}
+.slider .rightMenu img{
+    margin-top: 20px;
+}
+.slider .rightMenu .rightMenuItem{
+    width: 68px;
+    height: 62px;
+    text-align: center;
+}
+.slider .rightMenu .dialog{
+    background-color: #36aaa4;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.slider .rightMenu .letter{
+    background-color: #80d3cf;
+}
+.slider .rightMenu .hurt{
+    background-color: #5dbab5;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.slider .corusel{
+	text-align: center;
+}
+.slider .corusel img{
+	width: 100%;
+}
+.slider .verticalMenu {
+	text-align: center;
+}
+.selectStyle{
+    background-color: white;
+    display: inline-block;
+    width: 300px;
+    height: 52px;
+    border-radius: 5px;
+    position: relative;
+    margin: 40px 20px 0 20px;
+    z-index: 1;
+}
+.selectStyle select{
+    width: 100%;
+    height: 52px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-color: transparent;
+    border-radius: 3px;
+    color: #898989;
+    font-size: 12px;
+    -webkit-appearance: none;
+    position: relative;
+    z-index: 3;
+    background-color: transparent;
+}
+
+
+
+.pageContent{
+	padding-bottom: 110px;
+	background-color: #f6f5f2;
+}
+.pageContent .contentContainer ul li{
+	display: inline-block;
+	width: 48%;
+	padding-left: 4%;
+	vertical-align: top;
+}
+.pageContent .contentContainer ul li:first-child{
+	padding-left: 0;
+}
+.pageContent .contentContainer .contentHeader{
+	color: #232d3b;
+	font-size: 20px;
+	font-weight: lighter;
+	padding-top: 60px;
+}
+.pageContent .contentContainer .orangeText {
+	color: #ff742c;
+	padding-top: 13px;
+}
+
+
+
+
+.whiteLine{
+	height: 200px;
+    position: relative;
+}
+.whiteLine .iconsContainer{
+    position: absolute;
+    top: -30px;
+    width: 100%;
+}
+.whiteLine ul{
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    vertical-align: bottom;
+}
+.whiteLine ul li{
+    display: inline-block;
+    width: 23%;
+    vertical-align: top;
+    margin-left: 2%;
+    text-align: center;
+}
+.whiteLine .bottomMargin{
+    height: 80px;
+}
+.whiteLine .rectangleMenu{
+    height: 193px;
+    border-radius: 5px;
+    border-bottom: 5px solid transparent;
+}
+.whiteLine ul li:first-child{
+    margin-left: 0;
+}
+.whiteLine ul li:hover .bottomMargin{
+    height: 0;
+}
+.whiteLine ul li:hover{
+    cursor: pointer;
+}
+.whiteLine .blackRectangle{
+    height: 193px;
+    border-radius: 5px;
+    border-bottom: 8px solid transparent;
+    background-color: #232d3b;
+    border-bottom-color: #05080e;
+}
+.whiteLine .blueRectangle{
+    height: 193px;
+    border-radius: 5px;
+    border-bottom: 5px solid transparent;
+    background-color: #7accc8;
+    border-bottom-color: #3aa39d;
+}
+.whiteLine .greenRectangle{
+    height: 193px;
+    border-radius: 5px;
+    border-bottom: 5px solid transparent;
+    background-color: #a3d39c;
+    border-bottom-color: #68af5f;
+}
+.whiteLine .orangeRectangle{
+    height: 193px;
+    border-radius: 5px;
+    border-bottom: 5px solid transparent;
+    background-color: #ff742c;
+    border-bottom-color: #ff4712;
+}
+.whiteLine .menuIcon{
+    padding-top: 55px;
+}
+
+
+
+.blueLine{
+	height: 400px;
+	background-color: #5dbab5;
+    position: relative;
+    z-index: 2;
+}
+.blueLine img{
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    margin-top: -100px;
+}
+
+
+
+
+
+.footer{
+    width: 100%;
+    background-color: #151c27;
+    padding-top: 20px;
+    border-top:  8px solid #0d131a;
+    padding-bottom: 200px;
+}
+.footer .footerLogos{
+    float: right;
+}
+.footer .iconRectangle{
+    display: inline-block;
+    width: 60px;
+    height: 53px;
+    background-color: white;
+    border-bottom: 4px solid transparent;
+    margin-left: 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+.footer .footerLogos .rssRectangle{
+    background-color: #ffaa16;
+    border-bottom-color: #d38600;
+}
+.footer .footerLogos .dreableRectangle{
+    background-color: #ec5b95;
+    border-bottom-color: #d30054;
+}
+.footer .footerLogos .twitterRectangle{
+    background-color: #00aeef;
+    border-bottom-color: #0081b1;
+}
+.footer .footerLogos .facebookRectangle{
+    background-color: #0054a6;
+    border-bottom-color: #003a72;
+}
+.footer .footerLogos a{
+    display: inline-table;
+    vertical-align: middle;
+}
+.footer .footerLogos .linkIcon{
+    padding-top: 8px;
+}
+.footer .textUnderLogo{
+    font-size: 12px;
+    color: #435267;
+}
+.footer .footerInputContainer{
+    display: inline-block;
+    position: relative;
+}
+.footer .footerInputContainer .footerEmail {
+    height: 75px;
+    width: 540px;
+    margin-top: 35px;
+    background-color: #080c11;
+    border-color: transparent;
+    border-radius: 5px;
+    padding-left: 40px;
+    font-size: 15px;
+    font-weight: bolder;
+    padding-right: 60px;
+    color: white;
+}
+.footer .footerInputContainer .emailImage{
+    position: absolute;
+    top: 58px;
+    right: 33px;
+}
+
+
+
+</style>
+<body>
+	<div class="pageHeader">
+		<div class="contentContainer">
+			<div class="logoContainer">
+				<img src="logo.png" class="icon"/>
+				<div class="logoName"><span class="logoName1">HOST</span><span class="logoName2">COMPARE</span></div>
+			</div>
+			<div class="headerNav">
+				<ul type="none">
+					<li><a href="">Compare Hosting Providers</a></li>
+					<li><a href="">About</a></li>
+					<li><a href="">How it Works</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+				<input type="button" class="lightGreenButton" value="+ Sign Up">
+			</div>
+		</div>
+	</div>
+	<div class="slider">
+        <div class="rightMenu">
+            <div class="dialog rightMenuItem">
+                <a href="" ><img src="dialog.png" alt="dialog"></a>
+            </div>
+            <div class="letter rightMenuItem">
+                <a href="" ><img src="letter.png" alt="dialog"></a>
+            </div>
+            <div class="hurt rightMenuItem">
+                <a href="" ><img src="hurt.png" alt="dialog"></a>
+            </div>
+        </div>
+		<div class="contentContainer">
+			<div class="sliderHeader">Find the right cloud Hosting without the Fluffy white staff.</div>
+
+            <div class="corusel">
+				<img src="slide1.png" />
+			</div>
+			<div class="verticalMenu">
+                <div class="selectStyle">
+                    <img src="icon1.png" class="inputIcon">
+                    <select>
+                        <option>Diskspace Amount</option>
+                        <option>200Mb</option>
+                        <option>500Mb</option>
+                        <option>1Gb</option>
+                    </select>
+                    <div class="lightBlueArrow">&or;</div>
+                </div>
+                <div class="selectStyle">
+                    <img src="icon2.png" class="inputIcon">
+                    <select>
+                        <option>Operation System</option>
+                        <option>Windows</option>
+                        <option>Linux</option>
+                        <option>MacOS</option>
+                    </select>
+                    <div class="lightBlueArrow">&or;</div>
+                </div>
+                <br>
+				<input class="lightBlueButton" type="button" value="+ Get a quote Now">
+			</div>
+        </div>
+	</div>
+	<div class="pageContent">
+		<div class="contentContainer">
+			<ul type="none">
+				<li>
+					<p class="contentHeader">We use 100% real clouds</p>
+					<p class="orangeText">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+					<p class="text">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+				</li><!-- 
+			 --><li>
+					<p class="contentHeader">We don`t hurt kittens</p>
+					<p class="orangeText">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+					<p class="text">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+					<p class="text">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="whiteLine">
+        <div class="contentContainer">
+            <div class="iconsContainer">
+                <ul type="none" >
+                    <li>
+                        <div class="bottomMargin"></div>
+                        <div class="blackRectangle" class="rectangleMenu">
+                            <img src="cloud.png" alt="cloud" class="menuIcon"/>
+                        </div>
+                    </li><!--
+                 --><li>
+                        <div class="bottomMargin"></div>
+                        <div class="blueRectangle" class="rectangleMenu">
+                            <img src="cancel.png" alt="cancel" class="menuIcon"/>
+                        </div>
+                    </li><!--
+                 --><li>
+                        <div class="bottomMargin"></div>
+                        <div class="greenRectangle" class="rectangleMenu">
+                            <img src="circule.png" alt="" class="menuIcon"/>
+                        </div>
+                    </li><!--
+                 --><li>
+                        <div class="bottomMargin"></div>
+                        <div class="orangeRectangle" class="rectangleMenu">
+                          <img src="arrowLeft.png" alt="arrowLeft" class="menuIcon"/>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	</div>
+	<div class="blueLine">
+        <div class="contentContainer">
+            <div class="imageContainer">
+                <img src="window.png" alt="window">
+            </div>
+        </div>
+	</div>
+    <div class="footer">
+        <div class="contentContainer">
+            <div class="logoContainer">
+                <img src="logo.png" class="icon"/>
+                <div class="logoName"><span class="logoName1">HOST</span><span class="logoName2">COMPARE</span></div>
+            </div>
+            <div class="footerLogos">
+                <a href="http://www.rss.com" >
+                    <div class="rssRectangle iconRectangle">
+                        <img src="rss.png" alt="rss" class="linkIcon">
+                    </div>
+                </a>
+                <a href="http://dribbble.com/" >
+                    <div class="dreableRectangle iconRectangle">
+                        <img src="dreable.png" alt="dreable" class="linkIcon">
+                    </div>
+                </a>
+                <a href="http://twitter.com" >
+                    <div class="twitterRectangle iconRectangle">
+                        <img src="twitter.png" alt="twiter" class="linkIcon">
+                    </div>
+                </a>
+                <a href="http://facebook.com" >
+                    <div class="facebookRectangle iconRectangle">
+                        <img src="facebook.png" alt="facebook" class="linkIcon">
+                    </div>
+                </a>
+            </div>
+            <div class="textUnderLogo">
+                I`ll be ute when mad as a waratah. You little ripper rort where as busy as a captain cook.
+            </div>
+            <div class="footerInputContainer">
+                <input class="footerEmail"type="text" placeholder="Leave your email cobber" />
+                <img src="email.png" alt="email" class="emailImage"/>
+            </div>
+        </div>
+    </div>
+</body>
