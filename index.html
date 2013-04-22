@@ -3,6 +3,8 @@
 <head>
  <title>HostCompare</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="foundation.css">
+  
 </head>
 <style type="text/css">
 * {
@@ -63,8 +65,8 @@ img.icon{
 	border-top: 2px solid #639e59;
 }
 .lightBlueArrow{
-	width: 52px;
-	height: 52px;
+	width: 53px;
+	height: 53px;
 	background-color: #7accc8;
 	position: absolute;
 	top: 0;
@@ -237,14 +239,16 @@ img.icon{
 	text-align: center;
 }
 .selectStyle{
-    background-color: white;
+   background-color: transparent;
     display: inline-block;
     width: 300px;
     height: 52px;
-    border-radius: 5px;
     position: relative;
     margin: 40px 20px 0 20px;
     z-index: 1;
+}
+.selectStyle img{
+    z-index: 5;
 }
 .selectStyle select{
     width: 100%;
@@ -476,6 +480,7 @@ img.icon{
 
 
 </style>
+
 <body>
 	<div class="pageHeader">
 		<div class="contentContainer">
@@ -517,23 +522,32 @@ img.icon{
 			<div class="verticalMenu">
                 <div class="selectStyle">
                     <img src="icon1.png" class="inputIcon">
-                    <select>
-                        <option>Diskspace Amount</option>
-                        <option>200Mb</option>
-                        <option>500Mb</option>
-                        <option>1Gb</option>
-                    </select>
-                    <div class="lightBlueArrow">&or;</div>
+                    <form class="custom">
+                        <select class="customDropdown">
+                            <option>Diskspace Amount</option>
+                            <option>200Mb</option>
+                            <option>500Mb</option>
+                            <option>1Gb</option>
+                        </select>
+                        <div class="lightBlueArrow">
+                            <img src="arrow.png">
+                        </div>
+                    </form>
                 </div>
                 <div class="selectStyle">
                     <img src="icon2.png" class="inputIcon">
-                    <select>
-                        <option>Operation System</option>
-                        <option>Windows</option>
-                        <option>Linux</option>
-                        <option>MacOS</option>
-                    </select>
-                    <div class="lightBlueArrow">&or;</div>
+                    <form class="custom">
+                        <select class="customDropdown">
+                            <option>Operation System</option>
+                            <option>Windows</option>
+                            <option>Linux</option>
+                            <option>MacOS</option>
+                        </select>
+                        <div class="lightBlueArrow">
+                            <img src="arrow.png">
+                        </div>
+                    </form>
+                    
                 </div>
                 <br>
 				<input class="lightBlueButton" type="button" value="+ Get a quote Now">
@@ -633,6 +647,18 @@ img.icon{
                 <input class="footerEmail" type="text" placeholder="Leave your email cobber" />
                 <a href=""><img src="email.png" alt="email" class="emailImage"/></a>
             </div>
+            <div class="DDB">
+                <div class="large-4 columns">
+                  
+            </div>
         </div>
     </div>
 </body>
+<script src="zepto.js"></script>
+  <script src="foundation.js"></script>
+  <script src="foundation.forms.js"></script>
+  <script src="foundation.dropdown.js"></script>
+  <script>
+  $(document).foundation();
+</script>
+</html>
