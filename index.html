@@ -13,7 +13,6 @@
 }
 body {
 	margin: 0;
-    overflow-x:hidden;
     min-width: 1250px;
     color:;
 }
@@ -128,10 +127,15 @@ img.icon{
 	display: inline-block;
 	padding: 20px 0;
 }
+.logoContainer img{
+    position: absolute;
+    top: 18px;
+}
 .logoContainer .logoName{
 	display: inline-block;
 	color: white;
 	font-size: 18px;
+    padding-left: 35px;
 }
 .logoContainer .logoName .logoName1 {
 	font-weight: bold;
@@ -198,18 +202,30 @@ img.icon{
     height: 62px;
     text-align: center;
 }
+.slider .rightMenu .rightMenuItem:hover{
+    cursor: pointer;
+}
 .slider .rightMenu .dialog{
     background-color: #36aaa4;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
+.slider .rightMenu .dialog:hover{
+    background-color: #309691;
+}
 .slider .rightMenu .letter{
     background-color: #80d3cf;
+}
+.slider .rightMenu .letter:hover{
+    background-color: #7bcac6;
 }
 .slider .rightMenu .hurt{
     background-color: #5dbab5;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+.slider .rightMenu .hurt:hover{
+    background-color: #54aaa5;
 }
 .slider .corusel{
 	text-align: center;
@@ -386,21 +402,40 @@ img.icon{
     border-radius: 4px;
     text-align: center;
 }
+.footer .iconRectangle:hover{
+    cursor: pointer;
+}
 .footer .footerLogos .rssRectangle{
     background-color: #ffaa16;
     border-bottom-color: #d38600;
+}
+.footer .footerLogos .rssRectangle:hover{
+    background-color: #f1a014;
+    border-bottom-color: #c57d01;
 }
 .footer .footerLogos .dreableRectangle{
     background-color: #ec5b95;
     border-bottom-color: #d30054;
 }
+.footer .footerLogos .dreableRectangle:hover{
+    background-color: #e94e8c;
+    border-bottom-color: #c6004f;
+}
 .footer .footerLogos .twitterRectangle{
     background-color: #00aeef;
     border-bottom-color: #0081b1;
 }
+.footer .footerLogos .twitterRectangle:hover{
+    background-color: #00a4e1;
+    border-bottom-color: #0177a3;
+}
 .footer .footerLogos .facebookRectangle{
     background-color: #0054a6;
     border-bottom-color: #003a72;
+}
+.footer .footerLogos .facebookRectangle:hover{
+    background-color: #014d98;
+    border-bottom-color: #003365;
 }
 .footer .footerLogos a{
     display: inline-table;
@@ -444,10 +479,12 @@ img.icon{
 <body>
 	<div class="pageHeader">
 		<div class="contentContainer">
-			<div class="logoContainer">
-				<img src="logo.png" class="icon"/>
-				<div class="logoName"><span class="logoName1">HOST</span><span class="logoName2">COMPARE</span></div>
-			</div>
+            <a href="">
+    			<div class="logoContainer">
+    				<img src="logo.png" class="icon"/>
+    				<div class="logoName"><span class="logoName1">HOST</span><span class="logoName2">COMPARE</span></div>
+    			</div>
+            </a>
 			<div class="headerNav">
 				<ul type="none">
 					<li><a href="">Compare Hosting Providers</a></li>
@@ -561,10 +598,12 @@ img.icon{
 	</div>
     <div class="footer">
         <div class="contentContainer">
-            <div class="logoContainer">
-                <img src="logo.png" class="icon"/>
-                <div class="logoName"><span class="logoName1">HOST</span><span class="logoName2">COMPARE</span></div>
-            </div>
+            <a href="">
+                <div class="logoContainer">
+                    <img src="logo.png" class="icon"/>
+                    <div class="logoName"><span class="logoName1">HOST</span><span class="logoName2">COMPARE</span></div>
+                </div>
+            </a>
             <div class="footerLogos">
                 <a href="http://www.rss.com" >
                     <div class="rssRectangle iconRectangle">
@@ -592,7 +631,7 @@ img.icon{
             </div>
             <div class="footerInputContainer">
                 <input class="footerEmail" type="text" placeholder="Leave your email cobber" />
-                <img src="email.png" alt="email" class="emailImage"/>
+                <a href=""><img src="email.png" alt="email" class="emailImage"/></a>
             </div>
         </div>
     </div>
