@@ -4,7 +4,8 @@
  <title>HostCompare</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <link rel="stylesheet" type="text/css" href="foundation.css">
-  
+  <link rel="stylesheet" type="text/css" href="bootstrap-select.css">
+  <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
 </head>
 <style type="text/css">
 * {
@@ -724,17 +725,50 @@ img.icon{
                 <input class="footerEmail" type="text" placeholder="Leave your email cobber" />
                 <a href=""><img src="email.png" alt="email" class="emailImage"/></a>
             </div>
-            <div class="DDB">
-                <div class="large-4 columns">
-                  
+            
+            <div class="btn-group bootstrap-select">
+                <button class="btn dropdown-toggle clearfix" data-toggle="dropdown">
+                    <span class="filter-option pull-left">Mustard</span>&nbsp;<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" >
+                    <li rel="0" class="selected">
+                        <a tabindex="-1" href="#" class="">
+                            <span class="pull-left">Mustard</span>
+                            <i class="icon-ok check-mark"></i>
+                        </a>
+                    </li>
+                    <li rel="1">
+                        <a tabindex="-1" href="#" class="">
+                            <span class="pull-left">Ketchup</span>
+                            <i class="icon-ok check-mark"></i>
+                        </a>
+                    </li>
+                    <li rel="2">
+                        <a tabindex="-1" href="#" class="">
+                            <span class="pull-left">Relish</span>
+                            <i class="icon-ok check-mark"></i>
+                        </a>
+                    </li>
+                    <li rel="3">
+                        <a tabindex="-1" href="#" class="">
+                            <span class="pull-left">All of the above (and much, much more!)</span>
+                            <i class="icon-ok check-mark"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 </body>
+<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
 <script src="zepto.js"></script>
   <script src="foundation.js"></script>
   <script src="foundation.forms.js"></script>
   <script src="foundation.dropdown.js"></script>
+  <script src="bootstrap-select.js"></script>
+
   <script>
   $(document).foundation();
 </script>
