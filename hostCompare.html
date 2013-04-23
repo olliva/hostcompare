@@ -3,8 +3,6 @@
 <head>
  <title>HostCompare</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <link rel="stylesheet" type="text/css" href="foundation.css">
-  
 </head>
 <style type="text/css">
 * {
@@ -15,6 +13,7 @@
 }
 body {
 	margin: 0;
+    overflow-x:hidden;
     min-width: 1250px;
     color:;
 }
@@ -31,9 +30,6 @@ a{
 }
 a:hover{
 	cursor: pointer;
-}
-input:focus{
-    outline: none;
 }
 ul[type="none"] {
 	margin: 0;
@@ -73,6 +69,7 @@ img.icon{
 	right: 0;
 	border-top-right-radius: 3px;
 	border-bottom-right-radius: 3px;
+    z-index: 2;
     font-size: 20px;
     font-weight: bolder;
     color: white;
@@ -128,15 +125,10 @@ img.icon{
 	display: inline-block;
 	padding: 20px 0;
 }
-.logoContainer img{
-    position: absolute;
-    top: 16px;
-}
 .logoContainer .logoName{
 	display: inline-block;
 	color: white;
 	font-size: 18px;
-    padding-left: 35px;
 }
 .logoContainer .logoName .logoName1 {
 	font-weight: bold;
@@ -196,64 +188,27 @@ img.icon{
 }
 .slider .rightMenu img{
     margin-top: 20px;
-    border: 0;
 }
 .slider .rightMenu .rightMenuItem{
     width: 68px;
     height: 62px;
     text-align: center;
 }
-.slider .rightMenu .rightMenuItem:hover{
-    cursor: pointer;
-}
 .slider .rightMenu .dialog{
     background-color: #36aaa4;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
-.slider .rightMenu .dialog:hover{
-    background-color: #309691;
-}
 .slider .rightMenu .letter{
     background-color: #80d3cf;
-}
-.slider .rightMenu .letter:hover{
-    background-color: #7bcac6;
 }
 .slider .rightMenu .hurt{
     background-color: #5dbab5;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-.slider .rightMenu .hurt:hover{
-    background-color: #54aaa5;
-}
 .slider .corusel{
 	text-align: center;
-    height: 350px;
-    position: relative;
-
-}
-.slider .corusel .cloud1{
-    width: 300px;
-    position: absolute;
-    bottom: 0;
-    z-index: 3;
-    left: 382px;
-}
-.slider .corusel .cloud2{
-    width: 190px;
-    position: absolute;
-    bottom: 0;
-    z-index: 2;
-    right: 285px;
-}
-.slider .corusel .cloud3{
-    width: 350px;
-    position: absolute;
-    bottom: 0;
-    z-index: 1;
-    left: 212px;
 }
 .slider .corusel img{
 	width: 100%;
@@ -262,16 +217,14 @@ img.icon{
 	text-align: center;
 }
 .selectStyle{
+    background-color: white;
     display: inline-block;
-    border-radius: 5px;
     width: 300px;
     height: 52px;
+    border-radius: 5px;
     position: relative;
     margin: 40px 20px 0 20px;
     z-index: 1;
-}
-.selectStyle img{
-    z-index: 5;
 }
 .selectStyle select{
     width: 100%;
@@ -429,47 +382,25 @@ img.icon{
     border-radius: 4px;
     text-align: center;
 }
-.footer .iconRectangle:hover{
-    cursor: pointer;
-}
 .footer .footerLogos .rssRectangle{
     background-color: #ffaa16;
     border-bottom-color: #d38600;
-}
-.footer .footerLogos .rssRectangle:hover{
-    background-color: #f1a014;
-    border-bottom-color: #c57d01;
 }
 .footer .footerLogos .dreableRectangle{
     background-color: #ec5b95;
     border-bottom-color: #d30054;
 }
-.footer .footerLogos .dreableRectangle:hover{
-    background-color: #e94e8c;
-    border-bottom-color: #c6004f;
-}
 .footer .footerLogos .twitterRectangle{
     background-color: #00aeef;
     border-bottom-color: #0081b1;
-}
-.footer .footerLogos .twitterRectangle:hover{
-    background-color: #00a4e1;
-    border-bottom-color: #0177a3;
 }
 .footer .footerLogos .facebookRectangle{
     background-color: #0054a6;
     border-bottom-color: #003a72;
 }
-.footer .footerLogos .facebookRectangle:hover{
-    background-color: #014d98;
-    border-bottom-color: #003365;
-}
 .footer .footerLogos a{
     display: inline-table;
     vertical-align: middle;
-}
-.footer .footerLogos a img{
-    border: 0;
 }
 .footer .footerLogos .linkIcon{
     padding-top: 8px;
@@ -489,10 +420,11 @@ img.icon{
     background-color: #080c11;
     border-color: transparent;
     border-radius: 5px;
+    padding-left: 40px;
     font-size: 15px;
     font-weight: bolder;
+    padding-right: 60px;
     color: white;
-    padding: 25px 60px 25px 40px;
 }
 .footer .footerInputContainer .emailImage{
     position: absolute;
@@ -500,65 +432,16 @@ img.icon{
     right: 33px;
 }
 
-#axis1:hover .move-right{
-    transform: translate(200px,20px);
-    -webkit-transform: translate(200px,20px); /** Chrome & Safari **/
-    -o-transform: translate(200px,20px); /** Opera **/
-    -moz-transform: translate(200px,20px); /** Firefox **/
-}
-#axis2:hover .move-right{
-    transform: translate(150px,-30px);
-    -webkit-transform: translate(150px,-30px); /** Chrome & Safari **/
-    -o-transform: translate(150px,-30px); /** Opera **/
-    -moz-transform: translate(150px,-30px); /** Firefox **/
-}
-#axis3:hover .move-right{
-    transform: translate(-100px,10px);
-    -webkit-transform: translate(-100px,10px); /** Chrome & Safari **/
-    -o-transform: translate(-100px,10px); /** Opera **/
-    -moz-transform: translate(-100px,10px); /** Firefox **/
-}
-.object {
-    position: absolute;
-    transition: all 2s ease-in-out;
-    -webkit-transition: all 2s ease-in-out; /** Chrome & Safari **/
-    -moz-transition: all 2s ease-in-out; /** Firefox **/
-    -o-transition: all 2s ease-in-out; /** Opera **/
-}
-
 
 
 </style>
-
-
-<!--[if gte IE 8]>
-        <style>
-            .lightBlueArrow{
-                display: none;
-            }
-            .selectStyle select{
-                padding-right: 0;
-                height: 30px;
-            }
-            .selectStyle{
-                height:30px;
-            }
-            .inputIcon{
-                top: 0;
-            }
-
-
-        </style>
-    <![endif]-->
 <body>
 	<div class="pageHeader">
 		<div class="contentContainer">
-            <a href="">
-    			<div class="logoContainer">
-    				<img src="logo.png" class="icon"/>
-    				<div class="logoName"><span class="logoName1">HOST</span><span class="logoName2">COMPARE</span></div>
-    			</div>
-            </a>
+			<div class="logoContainer">
+				<img src="logo.png" class="icon"/>
+				<div class="logoName"><span class="logoName1">HOST</span><span class="logoName2">COMPARE</span></div>
+			</div>
 			<div class="headerNav">
 				<ul type="none">
 					<li><a href="">Compare Hosting Providers</a></li>
@@ -585,46 +468,29 @@ img.icon{
 		<div class="contentContainer">
 			<div class="sliderHeader">Find the right cloud Hosting without the Fluffy white staff.</div>
 
-            <div class="corusel one" >
-                <div id="axis1">
-				    <img src="cloud1.png" class="cloud1 object van move-right"/>
-                </div>
-                <div id="axis2">
-                    <img src="cloud2.png" class="cloud2 object van move-right"/>
-                </div>
-                <div id="axis3">
-                    <img src="cloud3.png" class="cloud3 object van move-right"/>
-                </div>
+            <div class="corusel">
+				<img src="slide1.png" />
 			</div>
 			<div class="verticalMenu">
                 <div class="selectStyle">
                     <img src="icon1.png" class="inputIcon">
-                    <form class="custom">
-                        <select class="customDropdown">
-                            <option>Diskspace Amount</option>
-                            <option>200Mb</option>
-                            <option>500Mb</option>
-                            <option>1Gb</option>
-                        </select>
-                        <div class="lightBlueArrow">
-                            <img src="arrow.png">
-                        </div>
-                    </form>
+                    <select>
+                        <option>Diskspace Amount</option>
+                        <option>200Mb</option>
+                        <option>500Mb</option>
+                        <option>1Gb</option>
+                    </select>
+                    <div class="lightBlueArrow">&or;</div>
                 </div>
                 <div class="selectStyle">
                     <img src="icon2.png" class="inputIcon">
-                    <form class="custom">
-                        <select class="customDropdown">
-                            <option>Operation System</option>
-                            <option>Windows</option>
-                            <option>Linux</option>
-                            <option>MacOS</option>
-                        </select>
-                        <div class="lightBlueArrow">
-                            <img src="arrow.png">
-                        </div>
-                    </form>
-                    
+                    <select>
+                        <option>Operation System</option>
+                        <option>Windows</option>
+                        <option>Linux</option>
+                        <option>MacOS</option>
+                    </select>
+                    <div class="lightBlueArrow">&or;</div>
                 </div>
                 <br>
 				<input class="lightBlueButton" type="button" value="+ Get a quote Now">
@@ -689,12 +555,10 @@ img.icon{
 	</div>
     <div class="footer">
         <div class="contentContainer">
-            <a href="">
-                <div class="logoContainer">
-                    <img src="logo.png" class="icon"/>
-                    <div class="logoName"><span class="logoName1">HOST</span><span class="logoName2">COMPARE</span></div>
-                </div>
-            </a>
+            <div class="logoContainer">
+                <img src="logo.png" class="icon"/>
+                <div class="logoName"><span class="logoName1">HOST</span><span class="logoName2">COMPARE</span></div>
+            </div>
             <div class="footerLogos">
                 <a href="http://www.rss.com" >
                     <div class="rssRectangle iconRectangle">
@@ -721,21 +585,9 @@ img.icon{
                 I`ll be ute when mad as a waratah. You little ripper rort where as busy as a captain cook.
             </div>
             <div class="footerInputContainer">
-                <input class="footerEmail" type="text" placeholder="Leave your email cobber" />
-                <a href=""><img src="email.png" alt="email" class="emailImage"/></a>
-            </div>
-            <div class="DDB">
-                <div class="large-4 columns">
-                  
+                <input class="footerEmail"type="text" placeholder="Leave your email cobber" />
+                <img src="email.png" alt="email" class="emailImage"/>
             </div>
         </div>
     </div>
 </body>
-<script src="zepto.js"></script>
-  <script src="foundation.js"></script>
-  <script src="foundation.forms.js"></script>
-  <script src="foundation.dropdown.js"></script>
-  <script>
-  $(document).foundation();
-</script>
-</html>
