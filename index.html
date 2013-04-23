@@ -3,7 +3,6 @@
 <head>
  <title>HostCompare</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <link rel="stylesheet" type="text/css" href="foundation.css">
   <link rel="stylesheet" type="text/css" href="bootstrap-select.css">
   <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
 </head>
@@ -33,6 +32,7 @@ a{
 a:hover{
 	cursor: pointer;
 }
+button:focus,
 input:focus{
     outline: none;
 }
@@ -266,10 +266,16 @@ img.icon{
     display: inline-block;
     border-radius: 5px;
     width: 300px;
-    height: 52px;
+    height: 54px;
     position: relative;
     margin: 40px 20px 0 20px;
     z-index: 1;
+    background-color: white;
+    color: #898989;
+    font-size: 12px;
+    padding-left: 50px;
+    border: 1px solid #333333;
+
 }
 .selectStyle img{
     z-index: 5;
@@ -612,6 +618,7 @@ img.icon{
                         </div>
                     </form>
                 </div>
+
                 <div class="selectStyle">
                     <img src="icon2.png" class="inputIcon">
                     <form class="custom">
@@ -726,33 +733,33 @@ img.icon{
                 <a href=""><img src="email.png" alt="email" class="emailImage"/></a>
             </div>
             
-            <div class="btn-group bootstrap-select">
-                <button class="btn dropdown-toggle clearfix" data-toggle="dropdown">
-                    <span class="filter-option pull-left">Mustard</span>&nbsp;<span class="caret"></span>
+            <div class="">
+                <button class="selectStyle" data-toggle="dropdown">
+                    <span class="filter-option pull-left">Mustard</span>
+                    <img src="icon1.png" class="inputIcon">
+                    <div class="lightBlueArrow">
+                        <img src="arrow.png">
+                    </div>
                 </button>
                 <ul class="dropdown-menu" role="menu" >
                     <li rel="0" class="selected">
                         <a tabindex="-1" href="#" class="">
                             <span class="pull-left">Mustard</span>
-                            <i class="icon-ok check-mark"></i>
                         </a>
                     </li>
                     <li rel="1">
                         <a tabindex="-1" href="#" class="">
                             <span class="pull-left">Ketchup</span>
-                            <i class="icon-ok check-mark"></i>
                         </a>
                     </li>
                     <li rel="2">
                         <a tabindex="-1" href="#" class="">
                             <span class="pull-left">Relish</span>
-                            <i class="icon-ok check-mark"></i>
                         </a>
                     </li>
                     <li rel="3">
                         <a tabindex="-1" href="#" class="">
                             <span class="pull-left">All of the above (and much, much more!)</span>
-                            <i class="icon-ok check-mark"></i>
                         </a>
                     </li>
                 </ul>
@@ -763,11 +770,6 @@ img.icon{
 <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-<script src="zepto.js"></script>
-  <script src="foundation.js"></script>
-  <script src="foundation.forms.js"></script>
-  <script src="foundation.dropdown.js"></script>
-  <script src="bootstrap-select.js"></script>
 
   <script>
   $(document).foundation();
