@@ -784,36 +784,7 @@ img.icon{
 </body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" scr="modernizr.js"></script>
-<script>
-$(document).ready(function(){
+<script type="text/javascript" scr="http://www.documentoved.ru/Resources/Javascripts/modernizr.js?version=3"></script>
 
-if(!Modernizr.input.placeholder){
-
-    $('[placeholder]').focus(function() {
-      var input = $(this);
-      if (input.val() == input.attr('placeholder')) {
-        input.val('');
-        input.removeClass('placeholder');
-      }
-    }).blur(function() {
-      var input = $(this);
-      if (input.val() == '' || input.val() == input.attr('placeholder')) {
-        input.addClass('placeholder');
-        input.val(input.attr('placeholder'));
-      }
-    }).blur();
-    $('[placeholder]').parents('form').submit(function() {
-      $(this).find('[placeholder]').each(function() {
-        var input = $(this);
-        if (input.val() == input.attr('placeholder')) {
-          input.val('');
-        }
-      })
-    });
-
-}
-
-</script>
 
 </html>
