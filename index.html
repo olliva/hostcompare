@@ -86,7 +86,7 @@ img.icon{
 	left: 18px;
 }
 .lightBlueButton{
-	width: 300px;
+	width: 300px !important;
 	height: 65px;
 	background-color: #7accc8;
 	border: 3px solid #7accc8;
@@ -262,6 +262,10 @@ img.icon{
 .slider .verticalMenu {
 	text-align: center;
 }
+.selectContainer{
+    position: relative;
+    display: inline-block;
+}
 .selectStyle{
     display: inline-block;
     border-radius: 5px;
@@ -274,25 +278,27 @@ img.icon{
     color: #898989;
     font-size: 12px;
     padding-left: 50px;
-    border: 1px solid #333333;
+    border: 1px solid #ff742c;;
 
 }
 .selectStyle img{
     z-index: 5;
 }
-.selectStyle select{
-    width: 100%;
-    height: 52px;
-    padding-left: 50px;
-    padding-right: 50px;
-    border-color: transparent;
-    border-radius: 3px;
+.selectContainer .dropdown-menu{
+    background-color: white;
+    width: 300px;
+
+}
+.selectContainer .dropdown-menu li:hover{
+    background-color: white;
+}
+.selectContainer .dropdown-menu li>a{
     color: #898989;
     font-size: 12px;
-    -webkit-appearance: none;
-    position: relative;
-    z-index: 3;
-    background-color: transparent;
+    padding-left: 50px;
+}
+.selectContainer .dropdown-menu li>a:hover{
+    color: black;
 }
 
 
@@ -538,7 +544,17 @@ img.icon{
 </style>
 
 
+<!--[if gte IE 8]>
+        <style>
+            .lightBlueArrow{
+                top: -15px;
+            }
+            .inputIcon{
+                top: -4px;
+            }
 
+        </style>
+    <![endif]-->
 <body>
 	<div class="pageHeader">
 		<div class="contentContainer">
@@ -586,36 +602,70 @@ img.icon{
                 </div>
 			</div>
 			<div class="verticalMenu">
-                <div class="selectStyle">
-                    <img src="icon1.png" class="inputIcon">
-                    <form class="custom">
-                        <select class="customDropdown">
-                            <option>Diskspace Amount</option>
-                            <option>200Mb</option>
-                            <option>500Mb</option>
-                            <option>1Gb</option>
-                        </select>
+                <div class="selectContainer">
+                    <button class="selectStyle" data-toggle="dropdown">
+                        <span class="filter-option pull-left">Diskspace Amount</span>
+                        <img src="icon1.png" class="inputIcon">
                         <div class="lightBlueArrow">
                             <img src="arrow.png">
                         </div>
-                    </form>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" >
+                        <li rel="0" class="selected">
+                            <a tabindex="-1" href="#" class="">
+                                <span class="pull-left">Diskspace Amount</span>
+                            </a>
+                        </li>
+                        <li rel="1">
+                            <a tabindex="-1" href="#" class="">
+                                <span class="pull-left">200Mb</span>
+                            </a>
+                        </li>
+                        <li rel="2">
+                            <a tabindex="-1" href="#" class="">
+                                <span class="pull-left">500Mb</span>
+                            </a>
+                        </li>
+                        <li rel="3">
+                            <a tabindex="-1" href="#" class="">
+                                <span class="pull-left">1Gb</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="selectStyle">
-                    <img src="icon2.png" class="inputIcon">
-                    <form class="custom">
-                        <select class="customDropdown">
-                            <option>Operation System</option>
-                            <option>Windows</option>
-                            <option>Linux</option>
-                            <option>MacOS</option>
-                        </select>
+                <div class="selectContainer">
+                    <button class="selectStyle" data-toggle="dropdown">
+                        <span class="filter-option pull-left">Operation System</span>
+                        <img src="icon2.png" class="inputIcon">
                         <div class="lightBlueArrow">
                             <img src="arrow.png">
                         </div>
-                    </form>
-                    
+                    </button>
+                    <ul class="dropdown-menu" role="menu" >
+                        <li rel="0" class="selected">
+                            <a tabindex="-1" href="#" class="">
+                                <span class="pull-left">Operation System</span>
+                            </a>
+                        </li>
+                        <li rel="1">
+                            <a tabindex="-1" href="#" class="">
+                                <span class="pull-left">Windows</span>
+                            </a>
+                        </li>
+                        <li rel="2">
+                            <a tabindex="-1" href="#" class="">
+                                <span class="pull-left">Linux</span>
+                            </a>
+                        </li>
+                        <li rel="3">
+                            <a tabindex="-1" href="#" class="">
+                                <span class="pull-left">MacOS</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
+
                 <br>
 				<input class="lightBlueButton" type="button" value="+ Get a quote Now">
 			</div>
@@ -714,46 +764,10 @@ img.icon{
                 <input class="footerEmail" type="text" placeholder="Leave your email cobber" />
                 <a href=""><img src="email.png" alt="email" class="emailImage"/></a>
             </div>
-            
-            <div class="">
-                <button class="selectStyle" data-toggle="dropdown">
-                    <span class="filter-option pull-left">Mustard</span>
-                    <img src="icon1.png" class="inputIcon">
-                    <div class="lightBlueArrow">
-                        <img src="arrow.png">
-                    </div>
-                </button>
-                <ul class="dropdown-menu" role="menu" >
-                    <li rel="0" class="selected">
-                        <a tabindex="-1" href="#" class="">
-                            <span class="pull-left">Mustard</span>
-                        </a>
-                    </li>
-                    <li rel="1">
-                        <a tabindex="-1" href="#" class="">
-                            <span class="pull-left">Ketchup</span>
-                        </a>
-                    </li>
-                    <li rel="2">
-                        <a tabindex="-1" href="#" class="">
-                            <span class="pull-left">Relish</span>
-                        </a>
-                    </li>
-                    <li rel="3">
-                        <a tabindex="-1" href="#" class="">
-                            <span class="pull-left">All of the above (and much, much more!)</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
         </div>
     </div>
 </body>
-<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
 
-  <script>
-  $(document).foundation();
-</script>
 </html>
