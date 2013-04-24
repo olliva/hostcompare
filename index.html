@@ -3,8 +3,8 @@
 <head>
  <title>HostCompare</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <link rel="stylesheet" type="text/css" href="bootstrap-select.css">
-  <link href="bootstrap-combined.min.css" rel="stylesheet">
+
+ 
 </head>
 <style type="text/css">
 * {
@@ -32,13 +32,22 @@ a{
 a:hover{
 	cursor: pointer;
 }
-button:focus,
+a:focus{
+    outline: none;
+}
+.footerInputContainer .footerEmail:focus{
+    outline: none;
+}
 input:focus{
     outline: none;
 }
-ul[type="none"] {
+ul {
 	margin: 0;
 	padding: 0;
+    list-style-type: none;
+}
+button:focus{
+    outline: none;
 }
 img.icon{
 	vertical-align: middle;
@@ -289,11 +298,31 @@ img.icon{
 .selectStyle img{
     z-index: 5;
 }
+
 .selectContainer .dropdown-menu{
-    background-color: white;
-    width: 300px;
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0px;
+    margin: 2px 0px 0px;
+    list-style: none;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-image: initial;
+    border-radius: 6px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
     left: 20px;
 
+}
+
+.selectContainer.open ul{
+    display: block;
 }
 
 .selectContainer .dropdown-menu li>a span{
@@ -303,6 +332,8 @@ img.icon{
 }
 .selectContainer .dropdown-menu li{
     text-align: left;
+    padding-left: 50px;
+    vertical-align: middle;
 }
 .selectContainer .dropdown-menu li:hover{
     background-color: #eaebec;
@@ -310,7 +341,8 @@ img.icon{
 .selectContainer .dropdown-menu li>a{
     color: #898989;
     font-size: 12px;
-    padding: 0 0 0 50px;
+    padding: 5px 0;
+    display: block;
 }
 .selectContainer .dropdown-menu li>a:hover{
     color: black;
@@ -605,16 +637,10 @@ img.icon{
 		<div class="contentContainer">
 			<div class="sliderHeader">Find the right cloud Hosting without the Fluffy white staff.</div>
 
-            <div class="corusel one" >
-                <div id="axis1">
-				    <img src="cloud1.png" class="cloud1 object van move-right"/>
-                </div>
-                <div id="axis2">
-                    <img src="cloud2.png" class="cloud2 object van move-right"/>
-                </div>
-                <div id="axis3">
-                    <img src="cloud3.png" class="cloud3 object van move-right"/>
-                </div>
+            <div class="corusel " >
+                <img src="cloud2.png"   data-xrange="40" data-yrange="40" class="cloud2"/>
+                <img src="cloud3.png"   data-xrange="30" data-yrange="50" class="cloud3"/>
+                <img src="cloud1.png"  data-xrange="50" data-yrange="30"  class="cloud1"/>
 			</div>
 			<div class="verticalMenu">
                 <div class="selectContainer">
@@ -785,6 +811,15 @@ img.icon{
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
 <script src="modernizr.js" type="text/javascript"></script>
+<script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script> 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="plax.js"></script>
+<script type="text/javascript">
+      $(document).ready(function () {
+        $('.corusel img').plaxify()
+        $.plax.enable()
+      })
+    </script>
 
 
 </html>
