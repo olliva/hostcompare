@@ -29,6 +29,7 @@ p{
 a{
 	text-decoration: none;
 }
+button:hover,
 a:hover{
 	cursor: pointer;
 }
@@ -51,6 +52,7 @@ button:focus{
 }
 img.icon{
 	vertical-align: middle;
+    border: 0;
 }
 .lightGreenButton{
 	height: 40px;
@@ -643,7 +645,13 @@ img.icon{
                 <img src="cloud1.png"  data-xrange="50" data-yrange="30"  class="cloud1"/>
 			</div>
 			<div class="verticalMenu">
-                <div class="selectContainer">
+                <div class="selectContainer row-fluid ">
+                    <select class="selectpicker">
+                      <option>Diskspace Amount</option>
+                      <option>200Mb</option>
+                      <option>500Mb</option>
+                      <option>1Gb</option>
+                    </select>
                     <button class="selectStyle" data-toggle="dropdown">
                         <span class="filter-option pull-left">Diskspace Amount</span>
                         <img src="icon1.png" class="inputIcon">
