@@ -144,9 +144,15 @@ img.icon{
 .pageHeader{
 	background-color: #232d3b;
 }
-.logoContainer {
-	display: block;
+
+.logoContainer.topLogoContainer
+{
+    display: block;
     float: left;
+}
+
+.logoContainer {
+	display: inline-block;
 	padding: 20px 0;
 }
 .logoContainer img{
