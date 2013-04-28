@@ -172,7 +172,7 @@ img.icon{
 	font-weight: lighter;
 }
 .pageHeader .contentContainer .headerNav{
-	display: inline-block;
+	display: none;
 	float: right;
 	margin-top: 12px;
 }
@@ -574,4 +574,9 @@ img.icon{
     right: 33px;
     border: 0;
 
+}
+
+.selectpicker
+{
+    display: none;
 }
