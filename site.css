@@ -74,9 +74,19 @@ img.icon{
     background-repeat: no-repeat;
     background-position: 20px 10px;
 }
+<<<<<<< HEAD
 
 .bootstrap-select button .caret,
 .lightBlueArrow{
+=======
+.operationSystemSelect{
+    background-image: url("img/icon2.png");
+    background-repeat: no-repeat;
+    background-position: 20px 10px;
+}
+
+.bootstrap-select button .caret{
+>>>>>>> new version
 	width: 52px;
 	height: 52px;
 	background: url("img/arrow.png") #7accc8 no-repeat 11px 13px;
@@ -91,10 +101,13 @@ img.icon{
     padding-top: 13px;
 }
 
+<<<<<<< HEAD
 .lightBlueArrow img{
     display: block;
     margin: 0 auto;
 }
+=======
+>>>>>>> new version
 .inputIcon{
 	position: absolute;
 	top: 11px;
