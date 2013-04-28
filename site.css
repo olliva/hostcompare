@@ -127,21 +127,26 @@ img.icon{
 	position: relative;
 	margin: 0 auto;
 	width: 950px;
-    overflow-x:;
 
 }
 .imageContainer{
     margin: 0 -100px;
 }
 
-
+.clearfix:after
+{
+    display: block;
+    clear: both;
+    content: " ";
+}
 
 
 .pageHeader{
 	background-color: #232d3b;
 }
 .logoContainer {
-	display: inline-block;
+	display: block;
+    float: left;
 	padding: 20px 0;
 }
 .logoContainer img{
